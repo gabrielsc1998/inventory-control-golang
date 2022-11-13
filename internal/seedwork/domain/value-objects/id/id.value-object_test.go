@@ -1,12 +1,13 @@
-package valueobject_id_test
+package id_test
 
 import (
 	"github.com/stretchr/testify/assert"
 
 	"testing"
 
+	"github.com/gabrielsc1998/inventory-control-golang/internal/seedwork/custom_errors"
+
 	valueobject_id "github.com/gabrielsc1998/inventory-control-golang/internal/seedwork/domain/value-objects/id"
-	customerror "github.com/gabrielsc1998/inventory-control-golang/internal/seedwork/errors"
 )
 
 func TestShouldCreateAnID(t *testing.T) {
@@ -19,5 +20,5 @@ func TestShouldCreateAnID(t *testing.T) {
 func TestShouldReturnErrorWhenTheIDIsInvalid(t *testing.T) {
 	id, error := valueobject_id.NewId("")
 	assert.Nil(t, id)
-	assert.Equal(t, error, customerror.InvalidParamError("id"))
+	assert.Equal(t, error, custom_errors.InvalidParamError("id"))
 }

@@ -1,6 +1,6 @@
-package valueobject_id
+package id
 
-import customerror "github.com/gabrielsc1998/inventory-control-golang/internal/seedwork/errors"
+import "github.com/gabrielsc1998/inventory-control-golang/internal/seedwork/custom_errors"
 
 type ID struct {
 	value string
@@ -8,7 +8,7 @@ type ID struct {
 
 func NewId(id string) (*ID, error) {
 	if len(id) == 0 {
-		return nil, customerror.InvalidParamError("id")
+		return nil, custom_errors.InvalidParamError("id")
 	}
 	return &ID{value: id}, nil
 }

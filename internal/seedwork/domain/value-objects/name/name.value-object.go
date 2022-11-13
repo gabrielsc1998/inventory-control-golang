@@ -1,6 +1,6 @@
-package valueobject_name
+package name
 
-import customerror "github.com/gabrielsc1998/inventory-control-golang/internal/seedwork/errors"
+import "github.com/gabrielsc1998/inventory-control-golang/internal/seedwork/custom_errors"
 
 type Name struct {
 	value string
@@ -8,7 +8,7 @@ type Name struct {
 
 func NewName(name string) (*Name, error) {
 	if len(name) == 0 {
-		return nil, customerror.InvalidParamError("name")
+		return nil, custom_errors.InvalidParamError("name")
 	}
 	return &Name{value: name}, nil
 }
