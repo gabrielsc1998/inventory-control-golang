@@ -13,7 +13,7 @@ import (
 func TestShouldReceiveAExpectedError_InvalidParam(t *testing.T) {
 	error := custom_errors.InvalidParamError("param")
 
-	const expectedText = custom_errors.InvalidParam + "param"
+	const expectedText = custom_errors.InvalidParam + " param"
 
 	assert.Equal(t, error, errors.New(expectedText))
 	assert.Equal(t, error.Error(), expectedText)

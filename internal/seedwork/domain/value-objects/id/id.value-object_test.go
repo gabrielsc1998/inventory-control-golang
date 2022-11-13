@@ -20,5 +20,5 @@ func TestShouldCreateAnID(t *testing.T) {
 func TestShouldReturnErrorWhenTheIDIsInvalid(t *testing.T) {
 	id, error := valueobject_id.NewId("")
 	assert.Nil(t, id)
-	assert.Equal(t, error, custom_errors.InvalidParamError("id"))
+	assert.Equal(t, error, custom_errors.InvalidParamError("- id"))
 }

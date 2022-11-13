@@ -19,5 +19,5 @@ func TestShouldCreateAName(t *testing.T) {
 func TestShouldReturnErrorWhenTheIDIsInvalid(t *testing.T) {
 	name, error := name.NewName("")
 	assert.Nil(t, name)
-	assert.Equal(t, error, custom_errors.InvalidParamError("name"))
+	assert.Equal(t, error, custom_errors.InvalidParamError("- name"))
 }

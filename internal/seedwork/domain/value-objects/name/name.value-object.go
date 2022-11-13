@@ -8,7 +8,7 @@ type Name struct {
 
 func NewName(name string) (*Name, error) {
 	if len(name) == 0 {
-		return nil, custom_errors.InvalidParamError("name")
+		return nil, custom_errors.InvalidParamError("- name")
 	}
 	return &Name{value: name}, nil
 }

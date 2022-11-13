@@ -8,7 +8,7 @@ type ID struct {
 
 func NewId(id string) (*ID, error) {
 	if len(id) == 0 {
-		return nil, custom_errors.InvalidParamError("id")
+		return nil, custom_errors.InvalidParamError("- id")
 	}
 	return &ID{value: id}, nil
 }
