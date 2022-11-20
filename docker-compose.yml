@@ -1,0 +1,16 @@
+services:
+  app_go:
+    container_name: app_go
+    build:
+      context: .
+    networks:
+      - go-app
+    volumes: 
+      - .:/home/app
+    tty: true
+    restart: always
+
+networks:
+  go-app:
+    driver: bridge
+      
